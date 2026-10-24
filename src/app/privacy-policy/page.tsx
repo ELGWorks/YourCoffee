@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1 p-4">
-          <h1>Privacy Policy</h1>
+          <h1 className="text-2xl font-bold">Privacy Policy</h1>
           <p>Hello world</p>
         </main>
         <Footer />

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import BusinessLogo from "../public/logos/business-logo.webp";
-import { Menu } from "lucide-react";
+import Link from "next/link";
 
 export function Header() {
   //[#724816] - dark brown
@@ -8,17 +8,25 @@ export function Header() {
   return (
     <>
       <header className="flex justify-between items-center bg-[#724816] pt-1 pr-2 pb-1 pl-2">
-        <div className="flex items-center gap-2">
-          <Image
-            src={BusinessLogo}
-            alt="Business Logo Preview"
-            className="w-15"
-          />
-          <p className="text-lg text-white">YourCoffee</p>
+        <div className="cursor-pointer">
+          <Link href="/">
+            <Image
+              src={BusinessLogo}
+              alt="Business Logo Preview"
+              className="w-15"
+            />
+          </Link>
         </div>
         <nav>
-          <button aria-label="Open navigation menu" className="cursor-pointer">
-            <Menu size={35} className="text-white" />
+          {/* Mobile view burger menu */}
+          <button aria-label="Open navigation menu" className="cursor-pointer md:hidden">
+            <Image
+              src="/icons/menu.svg"
+              alt=""
+              width={35}
+              height={35}
+              className="brightness-0 invert"
+            />
           </button>
         </nav>
       </header>

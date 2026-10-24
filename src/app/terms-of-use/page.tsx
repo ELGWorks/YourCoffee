@@ -7,7 +7,7 @@ export default function TermsOfUse() {
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1 p-4">
-          <h1>About Us</h1>
+          <h1 className="text-2xl font-bold">Terms of Use</h1>
           <p>Hello world</p>
         </main>
         <Footer />

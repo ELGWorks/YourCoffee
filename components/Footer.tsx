@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from 'next/link'
+import Link from 'next/link';
 
 export function Footer() {
   return (
@@ -44,17 +44,20 @@ export function Footer() {
           </a>
         </nav>
         <div className="flex flex-col gap-3 pl-1">
+          <Link href="/" className="self-start text-white">
+            Home
+          </Link>
+          <Link href="/order" className="self-start text-white">
+            Order Now
+          </Link>
           <Link href="/about-us" className="self-start text-white">
             About us
           </Link>
-          <a href="#" className="self-start text-white">
+          <a href="/privacy-policy" className="self-start text-white">
             Privacy Policy
           </a>
-          <a href="#" className="self-start text-white">
+          <a href="/terms-of-use" className="self-start text-white">
             Terms of Use
-          </a>
-          <a href="#" className="self-start text-white">
-            Cookie Preferences
           </a>
           <p className="text-white pt-5">© 2026 YourCoffee. All rights reserved.</p>
         </div>
