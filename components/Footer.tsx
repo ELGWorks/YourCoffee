@@ -44,7 +44,7 @@ export function Footer() {
           </a>
         </nav>
         <div className="flex flex-col gap-3 pl-1">
-          <Link href="/AboutUs" className="self-start text-white">
+          <Link href="/about-us" className="self-start text-white">
             About us
           </Link>
           <a href="#" className="self-start text-white">
