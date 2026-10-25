@@ -14,7 +14,6 @@ export function Header() {
               src={BusinessLogo}
               alt="Business Logo Preview"
               className="w-15"
-              loading="eager"
             />
           </Link>
         </div>

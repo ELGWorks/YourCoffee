@@ -25,7 +25,6 @@ export default function Home() {
               alt="Coffe Preview"
               width={500}
               height={500}
-              loading="eager"
               className="rounded-xl w-50 h-60 sm:w-80 sm:h-100 md:w-100 md:h-130 lg:w-100 lg:h-130 xl:w-130 xl:h-150 object-cover mb-5"
             />
           </div>
