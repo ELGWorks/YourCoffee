@@ -1,11 +1,11 @@
 import Image from "next/image";
-import Link from 'next/link';
+import Link from "next/link";
 
 export function Footer() {
   return (
     <>
       <footer className="flex flex-col w-full bottom-0 bg-[#724816] pt-1 pr-2 pb-1 pl-2">
-        <nav className="flex gap-3 pt-5 pb-5">
+        <nav className="flex gap-3 pt-5 pb-5 md:justify-center">
           <a href="#">
             <Image
               src="/icons/facebook-logo.svg"
@@ -43,7 +43,7 @@ export function Footer() {
             />
           </a>
         </nav>
-        <div className="flex flex-col gap-3 pl-1">
+        <div className="flex flex-col gap-3 pl-1 md:flex-row md:justify-center">
           <Link href="/" className="self-start text-white">
             Home
           </Link>
@@ -59,8 +59,13 @@ export function Footer() {
           <a href="/terms-of-use" className="self-start text-white">
             Terms of Use
           </a>
-          <p className="text-white pt-5">© 2026 YourCoffee. All rights reserved.</p>
+          <p className="text-white pt-5 md:hidden">
+            © 2026 YourCoffee. All rights reserved.
+          </p>
         </div>
+        <p className="hidden flex text-white pt-5 md:justify-center md:flex">
+            © 2026 YourCoffee. All rights reserved.
+          </p>
       </footer>
     </>
   );
