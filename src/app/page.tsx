@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <div className="flex min-h-dvh flex-col">
         <Header />
-        <main className="min-h-[calc(100dvh-68px)] flex-1 md:flex md:flex-row justify-center md:gap-25 lg:gap-35 xl:gap-50">
+        <main className="min-h-[calc(100dvh-68px)] flex-1 md:flex md:flex-row justify-center md:gap-10 lg:gap-35 xl:gap-50">
           <div className="flex justify-center items-center flex-col p-4 mt-10">
             <h1 className="text-4xl font-bold pb-10 sm:text-5xl sm:mb-5 md:hidden">
               YourCoffee
