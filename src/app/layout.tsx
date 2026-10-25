@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+// 1. Initialize Montserrat for the whole website
+const montserrat = localFont({
+  src: "./fonts/Montserrat-VariableFont_wght.ttf",
+  variable: "--font-sans", // Overrides Tailwind v4 default body font
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+// 2. Initialize PlaywriteITTrad for your special line
+const PlaywriteITTrad = localFont({
+  src: "./fonts/PlaywriteITTrad-VariableFont_wght.ttf",
+  variable: "--font-playwrite", // Hooks into the font-playwrite class
 });
 
 export const metadata: Metadata = {
@@ -17,11 +19,15 @@ export const metadata: Metadata = {
   description: "YourCoffee is a web-based system built for accepting and creating orders from customers online.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+export default function RootLayout({ children }: LayoutProps) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${montserrat.variable} ${PlaywriteITTrad.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

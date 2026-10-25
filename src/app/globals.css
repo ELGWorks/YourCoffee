@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@theme inline {
+  /* This maps Next.js optimize variables into active Tailwind classes */
+  --font-sans: var(--font-sans), sans-serif;
+  --font-playwrite: var(--font-playwrite), cursive;
+}

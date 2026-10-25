@@ -7,13 +7,14 @@ export function Header() {
   //[#F0DAAE] - light brown
   return (
     <>
-      <header className="flex justify-between items-center bg-[#724816] pt-1 pr-2 pb-1 pl-2">
+      <header className="flex justify-between items-center bg-[#724816] pt-2 pr-2 pb-2 pl-2">
         <div className="cursor-pointer">
           <Link href="/">
             <Image
               src={BusinessLogo}
               alt="Business Logo Preview"
               className="w-15"
+              loading="eager"
             />
           </Link>
         </div>
