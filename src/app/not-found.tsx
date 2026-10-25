@@ -13,11 +13,11 @@ export default function NotFound() {
     <>
       <div className="min-h-screen flex flex-col">
         <Header />
-        <main className="flex-1 flex justify-center flex-col gap-20 items-center p-4">
+        <main className="min-h-[calc(100dvh-68px)] flex-1 flex justify-center flex-col gap-20 items-center p-4">
           <h1 className="text-2xl font-bold">
             Oh no... The page you are looking for is not available.
           </h1>
-          <button className="text-xl text-white border border-none bg-[#724816] px-5 pt-4 pb-5 rounded-xl">
+          <button className="text-xl text-white border border-none bg-[#724816] px-5 pt-4 pb-5 rounded-xl hover:bg-[#A8783E] transition-colors duration-300 ease-in-out cursor-pointer">
             <Link href="/">
               Back to Home
             </Link>
