@@ -59,15 +59,25 @@ export function Footer() {
           <a href="/terms-of-use" className="self-start text-white">
             Terms of Use
           </a>
-          <p className="text-white pt-5 md:hidden">
-            © 2026 YourCoffee. All rights reserved.
+          <div className="md:hidden">
+            <p className="text-white md:hidden">
+              © {new Date().getFullYear()} YourCoffee. All rights reserved.
+            </p>
+            <p className="text-white">
+              Powered by{" "}
+              <span className="font-medium text-white">ELGWorks</span>
+            </p>
+          </div>
+        </div>
+        <div className="md:flex flex-col justify-center items-center hidden">
+          <p className="hidden flex text-white pt-5 md:justify-center md:flex">
+            © {new Date().getFullYear()} YourCoffee. All rights reserved.
+          </p>
+          <p className="text-white">
+            Powered by <span className="font-medium text-white">ELGWorks</span>
           </p>
         </div>
-        <p className="hidden flex text-white pt-5 md:justify-center md:flex">
-            © 2026 YourCoffee. All rights reserved.
-          </p>
       </footer>
     </>
   );
 }
- 
