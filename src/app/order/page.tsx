@@ -1,8 +1,7 @@
 import { Header } from "../../../components/Header";
 import { Footer } from "../../../components/Footer";
-import BusinessLogo from "../../../public/images/coffee.webp";
 import type { Metadata } from "next";
-import Image from "next/image";
+import { ProductCard } from "../../../components/ProductCard";
 
 export const metadata: Metadata = {
   title: "Order | YourCoffee",
@@ -60,38 +59,14 @@ export default function Order() {
           {/* Filter buttons */}
           <div className="flex mt-5 justify-center gap-10">
             <button className="border border-black p-3 rounded-xl cursor-pointer">
-              Food
+              Foods
             </button>
             <button className="border border-black p-3 rounded-xl cursor-pointer">
-              Beverage
+              Drinks
             </button>
           </div>
 
-          {/* Items card */}
-          <div className="ml-7 mr-7 mt-5 grid grid-cols-2 gap-5">
-            <div className="border border-black p-3 rounded-xl cursor-pointer h-40">
-              <div>
-                <Image
-                  src={BusinessLogo}
-                  width={50}
-                  height={50}
-                  alt="Food preview"
-                />
-                <p>Coffee</p>
-              </div>
-              <div>
-                <span>-</span>
-                <span>0</span>
-                <span>+</span>
-              </div>
-            </div>
-            <div className="border border-black p-3 rounded-xl cursor-pointer">
-              Food
-            </div>
-            <div className="border border-black p-3 rounded-xl cursor-pointer">
-              Food
-            </div>
-          </div>
+          <ProductCard />
         </main>
         <Footer />
       </div>
