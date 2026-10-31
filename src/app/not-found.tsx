@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Page Not Found | YourCoffee",
-  description: "The page you are looking for is not available."
+  description: "The page you are looking for is not available.",
 };
 
 export default function NotFound() {
@@ -17,11 +17,11 @@ export default function NotFound() {
           <h1 className="text-2xl font-bold">
             Oh no... The page you are looking for is not available.
           </h1>
-          <button className="text-xl text-white border border-none bg-[#724816] px-5 pt-4 pb-5 rounded-xl hover:bg-[#A8783E] transition-colors duration-300 ease-in-out cursor-pointer">
-            <Link href="/">
+          <Link href="/">
+            <button className="text-xl text-white border border-none bg-[#724816] px-5 pt-4 pb-5 rounded-xl hover:bg-[#A8783E] transition-colors duration-300 ease-in-out cursor-pointer">
               Back to Home
-            </Link>
-          </button>
+            </button>
+          </Link>
         </main>
         <Footer />
       </div>

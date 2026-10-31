@@ -1,4 +1,6 @@
 import type { CategoryStatus } from "../types/category";
+import Link from "next/link";
+import FilterButtons from "./FilterButtons";
 
 type OrderNavigationBarProps = {
   categoryStatus: CategoryStatus;
@@ -9,14 +11,7 @@ export function OrderNavigationBar({
   categoryStatus,
   setCategoryStatus,
 }: OrderNavigationBarProps) {
-  function selectCategory(category: CategoryStatus) {
-    setCategoryStatus(category);
 
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }
   return (
     <>
       <div className="sticky top-0 z-50">
@@ -29,9 +24,11 @@ export function OrderNavigationBar({
               </span>
             </div>
             <div>
-              <span className="text-white border border-white p-2 rounded-xl">
-                Menu
-              </span>
+              <Link href="/menu">
+                <button className="text-white border border-white p-2 rounded-xl cursor-pointer w-fit">
+                  Menu
+                </button>
+              </Link>
             </div>
           </div>
           <div className="flex flex-col opacity-50">
@@ -41,9 +38,11 @@ export function OrderNavigationBar({
               </span>
             </div>
             <div>
-              <span className="text-white border border-white p-2 rounded-xl">
-                Checkout
-              </span>
+              <Link href="/checkout">
+                <button className="text-white border border-white p-2 rounded-xl cursor-pointer w-fit">
+                  Checkout
+                </button>
+              </Link>
             </div>
           </div>
           <div className="flex flex-col opacity-50">
@@ -53,32 +52,16 @@ export function OrderNavigationBar({
               </span>
             </div>
             <div>
-              <span className="text-white border border-white p-2 rounded-xl">
-                Done
-              </span>
+              <Link href="/done">
+                <button className="text-white border border-white p-2 rounded-xl cursor-pointer w-fit">
+                  Done
+                </button>
+              </Link>
             </div>
           </div>
         </div>
 
-        {/* Filter buttons */}
-        <div className="flex pt-5 pb-5 justify-center gap-10 bg-[#F0DAAE]">
-          <button
-            onClick={() => {
-              selectCategory("food");
-            }}
-            className={`p-3 rounded-xl cursor-pointer bg-[#724816] text-white ${categoryStatus === "food" ? "opacity-100" : "opacity-50"}`}
-          >
-            Foods
-          </button>
-          <button
-            onClick={() => {
-              selectCategory("drink");
-            }}
-            className={`p-3 rounded-xl cursor-pointer bg-[#724816] text-white ${categoryStatus === "drink" ? "opacity-100" : "opacity-50"}`}
-          >
-            Drinks
-          </button>
-        </div>
+        
       </div>
     </>
   );

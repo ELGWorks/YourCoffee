@@ -35,7 +35,7 @@ export default function Home() {
             <p className="font-playwrite sm:mt-5 sm:text-lg md:text-xl lg:text-xl xl:text-2xl">
               A Cup of Comfort.
             </p>
-            <Link href="/order">
+            <Link href="/menu">
               <button className="bg-[#724816] px-8 py-4 rounded-xl text-white font-bold text-xl lg:px-16 hover:bg-[#A8783E] transition-colors duration-300 ease-in-out cursor-pointer">
                 Order now
               </button>

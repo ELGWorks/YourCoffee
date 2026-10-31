@@ -7,8 +7,9 @@ type ProductCardProps = {
 };
 
 export function ProductCard({ categoryStatus }: ProductCardProps) {
-  
-  const filteredProducts = products.filter((product) => product.type === categoryStatus);
+  const filteredProducts = products.filter((product) => {
+    return product.type === categoryStatus;
+  });
   return (
     <>
       {/* Items card grid*/}
