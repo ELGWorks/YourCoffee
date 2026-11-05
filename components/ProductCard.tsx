@@ -1,6 +1,7 @@
-import { products } from "../src/app/products/products";
+import { products } from "../src/app/data/products";
 import Image from "next/image";
 import { CategoryStatus } from "../types/category";
+import { cart } from "../src/app/data/cart"
 
 type ProductCardProps = {
   categoryStatus: CategoryStatus;
@@ -10,6 +11,13 @@ export function ProductCard({ categoryStatus }: ProductCardProps) {
   const filteredProducts = products.filter((product) => {
     return product.type === categoryStatus;
   });
+
+  function addToCart(productId: number) {
+    console.log(productId);
+    // cart.push(productId);
+    console.log(cart);
+  }
+
   return (
     <>
       {/* Items card grid*/}
@@ -51,6 +59,7 @@ export function ProductCard({ categoryStatus }: ProductCardProps) {
                 </button>
                 <span>0</span>
                 <button
+                  onClick={() => addToCart(product.id)}
                   type="button"
                   className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-gray-400 bg-white text-black transition-colors duration-150 hover:bg-gray-100 active:bg-gray-300"
                 >

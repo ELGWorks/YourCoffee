@@ -7,6 +7,7 @@ import { useState } from "react";
 import { CategoryStatus } from "../../../types/category";
 import { OrderNavigationBar } from "../../../components/OrderNavigationBar";
 import FilterButtons from "../../../components/FilterButtons";
+import { SummaryBar } from "../../../components/SummaryBar"
 
 export default function Order() {
   const [categoryStatus, setCategoryStatus] = useState<CategoryStatus>("food");
@@ -21,8 +22,12 @@ export default function Order() {
             categoryStatus={categoryStatus}
             setCategoryStatus={setCategoryStatus}
           />
-          <FilterButtons categoryStatus={categoryStatus} setCategoryStatus={setCategoryStatus} />
+          <FilterButtons
+            categoryStatus={categoryStatus}
+            setCategoryStatus={setCategoryStatus}
+          />
           <ProductCard categoryStatus={categoryStatus} />
+          <SummaryBar />
         </main>
         <Footer />
       </div>

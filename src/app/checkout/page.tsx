@@ -2,7 +2,6 @@
 
 import { Header } from "../../../components/Header";
 import { Footer } from "../../../components/Footer";
-import { ProductCard } from "../../../components/ProductCard";
 import { useState } from "react";
 import { CategoryStatus } from "../../../types/category";
 import { OrderNavigationBar } from "../../../components/OrderNavigationBar";
@@ -106,16 +105,41 @@ export default function CheckOutPage() {
 
             <div className="flex flex-col gap-2 rounded-xl bg-white p-5 sm:w-fit ml-5 mr-5">
               <p className="text-xl font-bold">Pay via Gcash</p>
-              <Image src="/images/gcash_sample_image.webp" alt="Gcash Preview Image" height={700} width={700} className="w-100 h-100 rounded-xl"/>
+              <Image
+                src="/images/gcash_sample_image.webp"
+                alt="Gcash Preview Image"
+                height={700}
+                width={700}
+                className="w-100 h-100 rounded-xl"
+              />
             </div>
 
-            <div>Upload Screenshot here</div>
+            <div className="flex flex-col gap-2 rounded-xl bg-white p-5 sm:w-fit ml-5 mr-5">
+              <p className="text-xl font-bold">Upload screenshot here</p>
+              <input
+                type="file"
+                id="avatar"
+                name="avatar"
+                accept="image/png, image/jpeg"
+              />
+            </div>
 
-            <button type="submit" className="bg-[#724816] px-8 py-4 rounded-xl text-white font-bold text-xl lg:px-16 hover:bg-[#A8783E] transition-colors duration-300 ease-in-out cursor-pointer">
+            <button
+              type="submit"
+              className="bg-[#724816] px-8 py-4 rounded-xl text-white font-bold text-xl lg:px-16 hover:bg-[#A8783E] transition-colors duration-300 ease-in-out cursor-pointer"
+            >
               Confirm
             </button>
 
-            <Link href="/menu" className="mb-10">Edit items</Link>
+            <Link href="/menu" className="mb-10 flex items-center gap-2">
+              <Image
+                src="/icons/arrow-left.svg"
+                alt="Back Icon Preview"
+                width={25}
+                height={25}
+              />
+              Edit items
+            </Link>
           </div>
         </main>
         <Footer />
