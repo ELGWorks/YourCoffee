@@ -1,7 +1,7 @@
 import { products } from "../src/app/data/products";
 import Image from "next/image";
 import { CategoryStatus } from "../types/category";
-import { cart } from "../src/app/data/cart"
+import { cart } from "../src/app/data/cart";
 
 type ProductCardProps = {
   categoryStatus: CategoryStatus;
@@ -49,7 +49,22 @@ export function ProductCard({ categoryStatus }: ProductCardProps) {
               <div>
                 <p>{product.name}</p>
                 <p>₱{product.price}.00</p>
+                {/* Sizes for drinks */}
+                {product.type === "drink" && (
+                  <div className="flex flex-row gap-5 items-center">
+                    <button className="flex justify-center items-center bg-[#724816] rounded-full w-6 h-6 text-white cursor-pointer">
+                      S
+                    </button>
+                    <button className="flex justify-center items-center  rounded-full w-6 h-6 text-gray-400 cursor-pointer">
+                      M
+                    </button>
+                    <button className="flex justify-center items-center  rounded-full w-6 h-6 text-gray-400 cursor-pointer">
+                      L
+                    </button>
+                  </div>
+                )}
               </div>
+              {/* Add and remove buttons */}
               <div className="flex items-center gap-5">
                 <button
                   type="button"

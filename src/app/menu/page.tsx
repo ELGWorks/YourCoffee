@@ -8,6 +8,7 @@ import { CategoryStatus } from "../../../types/category";
 import { OrderNavigationBar } from "../../../components/OrderNavigationBar";
 import FilterButtons from "../../../components/FilterButtons";
 import { SummaryBar } from "../../../components/SummaryBar"
+import { cart } from "../../app/data/cart"
 
 export default function Order() {
   const [categoryStatus, setCategoryStatus] = useState<CategoryStatus>("food");
@@ -27,7 +28,7 @@ export default function Order() {
             setCategoryStatus={setCategoryStatus}
           />
           <ProductCard categoryStatus={categoryStatus} />
-          <SummaryBar />
+          {cart.length > 0 && <SummaryBar />}
         </main>
         <Footer />
       </div>
