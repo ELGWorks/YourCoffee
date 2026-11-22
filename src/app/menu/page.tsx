@@ -23,10 +23,6 @@ export default function Order() {
             categoryStatus={categoryStatus}
             setCategoryStatus={setCategoryStatus}
           />
-          <FilterButtons
-            categoryStatus={categoryStatus}
-            setCategoryStatus={setCategoryStatus}
-          />
           <ProductCard categoryStatus={categoryStatus} />
           {cart.length > 0 && <SummaryBar cart={cart} />}
         </main>

@@ -20,7 +20,7 @@ export default function FilterButtons({ categoryStatus, setCategoryStatus }: Fil
   return (
     <>
       {/* Filter buttons */}
-      <div className="flex pt-5 justify-center gap-10 bg-[#F0DAAE]">
+      <div className="flex pt-5 pb-5 justify-center gap-10 bg-[#F0DAAE]">
         <button
           onClick={() => {
             selectCategory("food");

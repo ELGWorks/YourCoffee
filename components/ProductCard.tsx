@@ -21,7 +21,7 @@ export function ProductCard({ categoryStatus }: ProductCardProps) {
   return (
     <>
       {/* Items card grid*/}
-      <div className="grid justify-center mt-5 mb-5 gap-5 grid-cols-1 md:grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+      <div className="grid justify-center mb-5 gap-5 grid-cols-1 md:grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
         {filteredProducts.map((product) => (
           /* Actual individual item card */
           <div

@@ -1,3 +1,6 @@
+"use client";
+
+import { useRef, useEffect } from "react";
 import { CartItem } from "../types/cart";
 
 type SummaryBarProps = {
@@ -18,7 +21,7 @@ export function SummaryBar({ cart }: SummaryBarProps) {
   return (
     <>
       <div className="sticky bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-300">
-        <div className="max-h-[120px] overflow-y-auto">
+        <div className="max-h-[180px] overflow-y-auto">
           {cart.map((cartItem) => (
             <div
               key={cartItem.id}
@@ -32,7 +35,52 @@ export function SummaryBar({ cart }: SummaryBarProps) {
                   ₱{cartItem.quantity * cartItem.price}.00
                 </p>
               </div>
-              <div className="flex items-center">Trash icon here</div>
+              <div className="flex items-center">
+                {" "}
+                <button
+                  type="button"
+                  aria-label="Remove item"
+                  className="text-red-500 border border-red-300 p-1 rounded-xl transition-colors duration-300 hover:bg-red-500 hover:text-white hover:border-red-500 cursor-pointer"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 256 256"
+                    className="h-6 w-6"
+                  >
+                    <rect width="256" height="256" fill="none" />
+                    <line
+                      x1="216"
+                      y1="56"
+                      x2="40"
+                      y2="56"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="16"
+                    />
+                    <line
+                      x1="88"
+                      y1="24"
+                      x2="168"
+                      y2="24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="16"
+                    />
+                    <path
+                      d="M200,56V208a8,8,0,0,1-8,8H64a8,8,0,0,1-8-8V56"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="16"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
           ))}
         </div>
