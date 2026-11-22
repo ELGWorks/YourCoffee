@@ -28,7 +28,7 @@ export default function Order() {
             setCategoryStatus={setCategoryStatus}
           />
           <ProductCard categoryStatus={categoryStatus} />
-          {cart.length > 0 && <SummaryBar />}
+          {cart.length > 0 && <SummaryBar cart={cart} />}
         </main>
         <Footer />
       </div>

@@ -1,4 +1,6 @@
 import { CategoryStatus } from "../types/category";
+import { Product } from "../types/product";
+
 
 type FilterButtonsProps = {
   categoryStatus: CategoryStatus;

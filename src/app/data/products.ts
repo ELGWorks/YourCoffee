@@ -1,5 +1,5 @@
 
-import type { Product } from "../../../types/products";
+import type { Product } from "../../../types/product";
 
 export const products: Product[] = [
   // Drinks

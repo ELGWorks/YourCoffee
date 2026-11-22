@@ -52,13 +52,13 @@ export function ProductCard({ categoryStatus }: ProductCardProps) {
                 {/* Sizes for drinks */}
                 {product.type === "drink" && (
                   <div className="flex flex-row gap-5 items-center">
-                    <button className="flex justify-center items-center bg-[#724816] rounded-full w-6 h-6 text-white cursor-pointer">
+                    <button className="flex justify-center items-center bg-gray-300 rounded-full w-6 h-6 text-black cursor-pointer hover:bg-[#724816] hover:text-white">
                       S
                     </button>
-                    <button className="flex justify-center items-center  rounded-full w-6 h-6 text-gray-400 cursor-pointer">
+                    <button className="flex justify-center items-center bg-gray-300 rounded-full w-6 h-6 text-black cursor-pointer hover:bg-[#724816] hover:text-white">
                       M
                     </button>
-                    <button className="flex justify-center items-center  rounded-full w-6 h-6 text-gray-400 cursor-pointer">
+                    <button className="flex justify-center items-center bg-gray-300 rounded-full w-6 h-6 text-black cursor-pointer hover:bg-[#724816] hover:text-white">
                       L
                     </button>
                   </div>
