@@ -12,7 +12,7 @@ export function Footer() {
               alt="Facebook"
               width={35}
               height={35}
-              className="brightness-0 invert"
+              className="brightness-0 invert transition-opacity duration-300 hover:opacity-50"
             />
           </a>
           <a href="#">
@@ -21,7 +21,7 @@ export function Footer() {
               alt="Facebook"
               width={35}
               height={35}
-              className="brightness-0 invert"
+              className="brightness-0 invert transition-opacity duration-300 hover:opacity-50"
             />
           </a>
           <a href="#">
@@ -30,7 +30,7 @@ export function Footer() {
               alt="Facebook"
               width={35}
               height={35}
-              className="brightness-0 invert"
+              className="brightness-0 invert transition-opacity duration-300 hover:opacity-50"
             />
           </a>
           <a href="#">
@@ -39,24 +39,24 @@ export function Footer() {
               alt="Facebook"
               width={35}
               height={35}
-              className="brightness-0 invert"
+              className="brightness-0 invert transition-opacity duration-300 hover:opacity-50"
             />
           </a>
         </nav>
         <div className="flex flex-col gap-3 pl-1 md:flex-row md:justify-center">
-          <Link href="/" className="self-start text-white">
+          <Link href="/" className="self-start text-white hover:text-white/50 transition-colors duration-300">
             Home
           </Link>
-          <Link href="/menu" className="self-start text-white">
+          <Link href="/menu" className="self-start text-white hover:text-white/50 transition-colors duration-300">
             Order Now
           </Link>
-          <Link href="/about-us" className="self-start text-white">
+          <Link href="/about-us" className="self-start text-white hover:text-white/50 transition-colors duration-300">
             About us
           </Link>
-          <a href="/privacy-policy" className="self-start text-white">
+          <a href="/privacy-policy" className="self-start text-white hover:text-white/50 transition-colors duration-300">
             Privacy Policy
           </a>
-          <a href="/terms-of-use" className="self-start text-white">
+          <a href="/terms-of-use" className="self-start text-white hover:text-white/50 transition-colors duration-300">
             Terms of Use
           </a>
           <div className="md:hidden">
