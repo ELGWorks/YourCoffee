@@ -46,4 +46,13 @@ export const cart: CartItem[] = [
     image:
       "https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=500&q=80",
   },
+  {
+    id: 86,
+    name: "Test",
+    type: "food",
+    price: 95.0,
+    quantity: 1,
+    image:
+      "https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=500&q=80",
+  },
 ];

@@ -8,6 +8,14 @@ type SummaryBarProps = {
 };
 
 export function SummaryBar({ cart }: SummaryBarProps) {
+  const cartItemListDiv = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (cartItemListDiv.current) {
+      cartItemListDiv.current.scrollTop = cartItemListDiv.current.scrollHeight;
+    }
+  }, [cart])
+
   const totalPrice = cart.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0,
@@ -21,7 +29,7 @@ export function SummaryBar({ cart }: SummaryBarProps) {
   return (
     <>
       <div className="sticky bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-300">
-        <div className="max-h-[180px] overflow-y-auto">
+        <div ref={cartItemListDiv} className="max-h-[180px] overflow-y-auto">
           {cart.map((cartItem) => (
             <div
               key={cartItem.id}
