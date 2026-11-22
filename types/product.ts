@@ -3,6 +3,5 @@ export type Product = {
   name: string;
   type: "food" | "drink";
   price: number;
-  quantity: number;
   image: string;
 };

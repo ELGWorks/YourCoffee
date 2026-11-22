@@ -1,7 +1,7 @@
-import { Product } from "../types/product";
+import { CartItem } from "../types/cart";
 
 type SummaryBarProps = {
-  cart: Product[];
+  cart: CartItem[];
 };
 
 export function SummaryBar({ cart }: SummaryBarProps) {

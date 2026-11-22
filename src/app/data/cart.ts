@@ -1,6 +1,6 @@
-import { Product } from "../../../types/product";
+import { CartItem } from "../../../types/cart";
 
-export const cart: Product[] = [
+export const cart: CartItem[] = [
   {
     id: 36,
     name: "Cinnamon Roll",
