@@ -8,12 +8,8 @@ export class Cart {
   }
 
   addToCart(product: CartItem): void {
-    if (product.type !== "food" && product.type !== "drink") {
-      throw new Error("Item type must be food or drink");
-    }
-
     if (product.quantity <= 0 || !Number.isInteger(product.quantity)) {
-        throw new Error("Quantity must be a positive whole number.");
+      throw new Error("Quantity must be a positive whole number.");
     }
 
     if (product.type === "food") {
@@ -24,11 +20,17 @@ export class Cart {
       } else {
         this.items.push({ ...product });
       }
-    } else if (product.type === "drink") {
-      //logic for drinks
-    }
 
-    //this.items.push(product);
-    console.log(this.items);
+    } else if (product.type === "drink") {
+      
+      const exist = this.items.find((item) => item.id === product.id && item.type === "drink" && item.size === product.size);
+
+      if (exist ) {
+        exist.quantity += product.quantity;
+      } else {
+        this.items.push({ ...product });
+      }
+      
+    }
   }
 }
